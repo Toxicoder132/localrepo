@@ -16,21 +16,6 @@
   --transition: all 0.3s ease;
 }
 
-/* Light Theme Variables */
-body.light-theme {
-  --bg-color: #f8fafc;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --accent-color: #2563eb;
-  --accent-secondary: #7c3aed;
-  
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  --nav-bg: rgba(248, 250, 252, 0.8);
-  --card-hover: rgba(255, 255, 255, 0.9);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -453,6 +438,7 @@ body.light-theme .blob-cont {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
