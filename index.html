@@ -24,21 +24,32 @@
             <ul>
                 <li><a href="#hero" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+            <!-- Icon will be inserted by JS -->
+            <span class="theme-icon">🌓</span>
+        </button>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="section reveal">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="gradient-text">Creative Developer</span></h1>
-                <p>I build interactive, modern, and beautiful web experiences.</p>
-                <div class="cta-buttons">
+        <!-- NEW Hero Section (2 Columns) -->
+        <section id="hero" class="section reveal hero-split">
+            <div class="hero-text">
+                <h1>Hi, I'm a <br><span class="gradient-text">Creative Developer</span></h1>
+                <p>I build <span id="typewriter" class="typewriter-text">Web Applications.</span><span class="cursor"></span></p>
+                <div class="cta-buttons" style="justify-content: flex-start;">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Creative Developer Desk" class="floating-img">
                 </div>
             </div>
         </section>
@@ -61,6 +72,63 @@
             </div>
         </section>
 
+        <!-- Services Section -->
+        <section id="services" class="section reveal">
+            <div class="section-title">
+                <h2>My <span>Services</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, performant, and accessible websites using modern frameworks and technologies.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting intuitive and visually appealing user interfaces with a focus on user experience.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring your website looks and functions perfectly across all devices and screen sizes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section reveal">
+            <div class="section-title">
+                <h2>My <span>Experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Senior Frontend Developer</h3>
+                        <span class="timeline-date">2024 - Present | Tech Innovations Inc.</span>
+                        <p>Leading the frontend team in building scalable enterprise web applications using React and TypeScript.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Web Developer</h3>
+                        <span class="timeline-date">2021 - 2024 | Digital Studio</span>
+                        <p>Developed interactive marketing sites and e-commerce platforms for various clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Freelance UI Designer</h3>
+                        <span class="timeline-date">2019 - 2021 | Self-Employed</span>
+                        <p>Designed user interfaces for mobile apps and web platforms, focusing on usability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="section reveal">
             <div class="section-title">
@@ -70,7 +138,6 @@
                 <!-- Project 1 -->
                 <div class="project-card glass-card">
                     <div class="project-image" style="background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));">
-                        <!-- Placeholder for actual image -->
                     </div>
                     <div class="project-info">
                         <h3>E-Commerce Dashboard</h3>
@@ -81,7 +148,6 @@
                 <!-- Project 2 -->
                 <div class="project-card glass-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
-                        <!-- Placeholder for actual image -->
                     </div>
                     <div class="project-info">
                         <h3>Social Media App</h3>
@@ -92,7 +158,6 @@
                 <!-- Project 3 -->
                 <div class="project-card glass-card">
                     <div class="project-image" style="background: linear-gradient(225deg, #f59e0b, #ef4444);">
-                        <!-- Placeholder for actual image -->
                     </div>
                     <div class="project-info">
                         <h3>AI Image Generator</h3>
