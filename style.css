@@ -1,14 +1,17 @@
 /* CSS Reset and Variables */
 :root {
-  --bg-color: #0f172a; /* Slate 900 */
-  --text-primary: #f8fafc; /* Slate 50 */
-  --text-secondary: #94a3b8; /* Slate 400 */
-  --accent-color: #3b82f6; /* Blue 500 */
-  --accent-secondary: #8b5cf6; /* Violet 500 */
+  /* Dark Theme (Default) */
+  --bg-color: #0f172a; 
+  --text-primary: #f8fafc; 
+  --text-secondary: #94a3b8; 
+  --accent-color: #3b82f6; 
+  --accent-secondary: #8b5cf6; 
   
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.05);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --card-hover: rgba(255, 255, 255, 0.05);
   
   --transition: all 0.3s ease;
 }
@@ -30,6 +33,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typography */
@@ -60,6 +64,11 @@ a {
   height: 100vh;
   z-index: -1;
   overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+body.light-theme .blob-cont {
+  opacity: 0.2; /* Make blobs less intense in light mode */
 }
 
 .blob {
@@ -101,6 +110,11 @@ a {
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   border-radius: 16px;
+  transition: var(--transition);
+}
+
+.glass-card:hover {
+  background: var(--card-hover);
 }
 
 .btn {
@@ -139,11 +153,29 @@ a {
 .btn-small {
   padding: 8px 20px;
   font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--glass-border);
+  color: var(--text-primary);
 }
 
 .btn-small:hover {
   background: var(--accent-color);
+  color: white;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-icon:hover {
+  transform: scale(1.1) rotate(15deg);
 }
 
 .w-full {
@@ -182,7 +214,7 @@ a {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.8);
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--glass-border);
   transition: var(--transition);
@@ -200,7 +232,7 @@ a {
 .navbar ul {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 25px;
 }
 
 .nav-link {
@@ -317,13 +349,102 @@ a {
 }
 
 .skill-tag {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(59, 130, 246, 0.1);
   color: var(--accent-color);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
   border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--text-secondary);
+}
+
+/* Experience Section (Timeline) */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 100%;
+  width: 2px;
+  background: var(--glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -31px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 3px solid var(--bg-color);
+  z-index: 2;
+}
+
+.timeline-content {
+  padding: 25px;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.timeline-date {
+  display: block;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.timeline-content p {
+  color: var(--text-secondary);
 }
 
 /* Projects Section */
@@ -401,6 +522,11 @@ a {
   transition: var(--transition);
 }
 
+body.light-theme .input-group input,
+body.light-theme .input-group textarea {
+  background: rgba(0, 0, 0, 0.03);
+}
+
 .input-group input:focus,
 .input-group textarea:focus {
   outline: none;
@@ -413,7 +539,7 @@ footer {
   text-align: center;
   padding: 40px 20px;
   border-top: 1px solid var(--glass-border);
-  background: rgba(15, 23, 42, 0.9);
+  background: var(--nav-bg);
 }
 
 footer p {
@@ -454,7 +580,7 @@ footer p {
   }
   
   .navbar ul {
-    display: none; /* In a real app, add a hamburger menu */
+    display: none;
   }
   
   .cta-buttons {
