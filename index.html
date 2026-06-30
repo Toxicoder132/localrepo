@@ -3,10 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+    <meta name="description" content="Portfolio of a Creative Developer and Designer">
+    <title>Portfolio | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>hello world </p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam, sed ad voluptatibus quidem ducimus quos id esse nihil qui exercitationem. Rem molestiae reiciendis, tenetur vero repudiandae veniam accusantium quis?</p>
+    <!-- Background Animated Blobs -->
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">Dev.<span>Portfolio</span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section reveal">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="gradient-text">Creative Developer</span></h1>
+                <p>I build interactive, modern, and beautiful web experiences.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+            </div>
+            <div class="about-content glass-card">
+                <p>I am a passionate software developer specializing in creating dynamic and beautiful web applications. I combine my technical skills with a strong eye for design to craft user interfaces that are both intuitive and visually stunning.</p>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Node.js</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section reveal">
+            <div class="section-title">
+                <h2>Featured <span>Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));">
+                        <!-- Placeholder for actual image -->
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Dashboard</h3>
+                        <p>A modern admin dashboard built with React and interactive charts.</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                        <!-- Placeholder for actual image -->
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media App</h3>
+                        <p>A full-stack social platform featuring real-time messaging and sleek UI.</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(225deg, #f59e0b, #ef4444);">
+                        <!-- Placeholder for actual image -->
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Image Generator</h3>
+                        <p>A web app that generates stunning images using modern AI models.</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <div class="section-title">
+                <h2>Get In <span>Touch</span></h2>
+            </div>
+            <div class="contact-content glass-card">
+                <p>I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Creative Developer. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Github</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
