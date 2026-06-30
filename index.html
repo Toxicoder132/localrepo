@@ -3,10 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+    <meta name="description" content="Portfolio of a Creative Developer and Designer">
+    <title>Portfolio | Creative Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>hello world </p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam, sed ad voluptatibus quidem ducimus quos id esse nihil qui exercitationem. Rem molestiae reiciendis, tenetur vero repudiandae veniam accusantium quis?</p>
+    <!-- Background Animated Blobs -->
+    <div class="blob-cont">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">Dev.<span>Portfolio</span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+            <!-- Icon will be inserted by JS or CSS -->
+            <span class="theme-icon">🌓</span>
+        </button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section reveal">
+            <div class="hero-content">
+                <h1>Hi, I'm a <br><span class="gradient-text">Creative Developer</span></h1>
+                <p>I build <span id="typewriter" class="typewriter-text"></span><span class="cursor"></span></p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+            </div>
+            <div class="about-content glass-card">
+                <p>I am a passionate software developer specializing in creating dynamic and beautiful web applications. I combine my technical skills with a strong eye for design to craft user interfaces that are both intuitive and visually stunning.</p>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Node.js</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section reveal">
+            <div class="section-title">
+                <h2>My <span>Services</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, performant, and accessible websites using modern frameworks and technologies.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting intuitive and visually appealing user interfaces with a focus on user experience.</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring your website looks and functions perfectly across all devices and screen sizes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section reveal">
+            <div class="section-title">
+                <h2>My <span>Experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Senior Frontend Developer</h3>
+                        <span class="timeline-date">2024 - Present | Tech Innovations Inc.</span>
+                        <p>Leading the frontend team in building scalable enterprise web applications using React and TypeScript.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Web Developer</h3>
+                        <span class="timeline-date">2021 - 2024 | Digital Studio</span>
+                        <p>Developed interactive marketing sites and e-commerce platforms for various clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Freelance UI Designer</h3>
+                        <span class="timeline-date">2019 - 2021 | Self-Employed</span>
+                        <p>Designed user interfaces for mobile apps and web platforms, focusing on usability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section reveal">
+            <div class="section-title">
+                <h2>Featured <span>Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Dashboard</h3>
+                        <p>A modern admin dashboard built with React and interactive charts.</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media App</h3>
+                        <p>A full-stack social platform featuring real-time messaging and sleek UI.</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(225deg, #f59e0b, #ef4444);">
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Image Generator</h3>
+                        <p>A web app that generates stunning images using modern AI models.</p>
+                        <a href="#" class="btn btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <div class="section-title">
+                <h2>Get In <span>Touch</span></h2>
+            </div>
+            <div class="contact-content glass-card">
+                <p>I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Creative Developer. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Github</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
